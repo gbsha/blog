@@ -1,5 +1,7 @@
 # Generalized Mutual Information
 
+Generalized mutual information was first defined in [4, Eq. (19)].
+
 ## Channel Coding Theorem by Maximum Likelihood Decoding
 
 A discrete time channel with inputs $x_i$ and outputs $y_i$, $i=1,2,\dotsc, n$ is called memoryless, if
@@ -40,3 +42,5 @@ where by the information inequality, we have equality if and only if $Q_{X|Y}=P_
 [2] G. Kramer, *Information Theory*, lecture notes, Technical University of Munich.
 
 [3] T. M. Cover, A. T. Joy, *Elements of Information Theory*, 2006.
+
+[4] G. Kaplan, S.Shamai (Shitz), [*Information Rates and Error Exponents of Compound Channels with Application to Antipodal Signaling in a Fading Environment*](pdf/kaplan1993information.pdf), 1993.
