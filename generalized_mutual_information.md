@@ -8,7 +8,7 @@ that is, given the input $x^n$, the outputs are independent and distributed acco
 
 Consider a rate $R$ code 
 $\mathcal{C}=\{c^n(1),c^n(2),\dotsc, c^n(2^{nR})\}$ with codewords $c^n(1)$. A maximum-likelihood (ML) decoder uses the decoding rule 
-$$\underset{w\in\{1,\dotsc,2^{nR}\}}{\text{arg max}}\prod_{i=1}^n P_{Y|X}(y_i|c_i(w))$$
+$$\hat{w}=\underset{w\in\{1,\dotsc,2^{nR}\}}{\text{arg max}}\prod_{i=1}^n P_{Y|X}(y_i|c_i(w))$$
 
 The channel coding theorem states that there exists a sequence of codes for which under ML decoding, the error probability $\Pr(W\neq\hat{W})$ approaches zero as the code length $n$ approaches infinity, if the rate is smaller than the mutual information of channel input and channel output, i.e., if
 $$R<\mathbb{I}(X;Y).$$
