@@ -20,7 +20,7 @@ A proof of the direct part using ML decoding can be found in [1, Chapter 5] and 
 ## A First Look at Generalized Mutual Information
 
 For uniformly distributed input $X$, the ML rule can also be written as
-$$\underset{w\in\{1,\dotsc,2^{nR}\}}{\text{arg max}}\prod_{i=1}^n P_{Y|X}(y_i|c_i(w)) = \underset{w\in\lbrace 1,\dotsc,2^{nR}\rbrace}{\text{arg max}}\prod_{i=1}^n \frac{P_X(c_i(w))P_Y(y_i)}{P_Y(y_i)} P_{Y|X}(y_i|c_i(w))=\underset{w\in\lbrace 1,\dotsc,2^{nR}\rbrace}{\text{arg max}}\prod_{i=1}^n P_{X|Y}(c_i(w)|y_i)$$
+$$\underset{w\in\lbrace 1,\dotsc,2^{nR}\rbrace}{\text{arg max}}\prod_{i=1}^n P_{Y|X}(y_i|c_i(w)) = \underset{w\in\lbrace 1,\dotsc,2^{nR}\rbrace}{\text{arg max}}\prod_{i=1}^n \frac{P_X(c_i(w))P_Y(y_i)}{P_Y(y_i)} P_{Y|X}(y_i|c_i(w))=\underset{w\in\lbrace 1,\dotsc,2^{nR}\rbrace}{\text{arg max}}\prod_{i=1}^n P_{X|Y}(c_i(w)|y_i)$$
 where $P_{X|Y}(x|y)$ is the a posteriori probability (APP) that the channel input was $x$, given that $y$ was observed at the channel output.
 
 Writing out the mutual information, we have
