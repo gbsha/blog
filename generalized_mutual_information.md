@@ -8,7 +8,7 @@ that is, given the input $x^n$, the outputs are independent and distributed acco
 
 Consider a rate $R$ code 
 $\mathcal{C}=\lbrace c^n(1),c^n(2),\dotsc, c^n(2^{nR})\rbrace$. A maximum-likelihood (ML) decoder uses the decoding rule 
-$$\hat{w}=\underset{w\in\{1,\dotsc,2^{nR}\}}{\text{arg max}}\prod_{i=1}^n P_{Y|X}(y_i|c_i(w))$$
+$$\hat{w}=\underset{w\in\lbrace 1,\dotsc,2^{nR}\rbrace}{\text{arg max}}\prod_{i=1}^n P_{Y|X}(y_i|c_i(w))$$
 
 The channel coding theorem states that there exists a sequence of codes for which under ML decoding, the error probability $\Pr(W\neq\hat{W})$ approaches zero as the code length $n$ approaches infinity, if the rate is smaller than the mutual information of channel input and channel output, i.e., if
 $$R<\mathbb{I}(X;Y).$$
@@ -20,7 +20,7 @@ A proof of the direct part using ML decoding can be found in [1, Chapter 5] and 
 ## A First Look at Generalized Mutual Information
 
 For uniformly distributed input $X$, the ML rule can also be written as
-$$\underset{w\in\{1,\dotsc,2^{nR}\}}{\text{arg max}}\prod_{i=1}^n P_{Y|X}(y_i|c_i(w)) = \underset{w\in\{1,\dotsc,2^{nR}\}}{\text{arg max}}\prod_{i=1}^n \frac{P_X(c_i(w))P_Y(y_i)}{P_Y(y_i)} P_{Y|X}(y_i|c_i(w))=\underset{w\in\{1,\dotsc,2^{nR}\}}{\text{arg max}}\prod_{i=1}^n P_{X|Y}(c_i(w)|y_i)$$
+$$\underset{w\in\{1,\dotsc,2^{nR}\}}{\text{arg max}}\prod_{i=1}^n P_{Y|X}(y_i|c_i(w)) = \underset{w\in\lbrace 1,\dotsc,2^{nR}\rbrace}{\text{arg max}}\prod_{i=1}^n \frac{P_X(c_i(w))P_Y(y_i)}{P_Y(y_i)} P_{Y|X}(y_i|c_i(w))=\underset{w\in\lbrace 1,\dotsc,2^{nR}\rbrace}{\text{arg max}}\prod_{i=1}^n P_{X|Y}(c_i(w)|y_i)$$
 where $P_{X|Y}(x|y)$ is the a posteriori probability (APP) that the channel input was $x$, given that $y$ was observed at the channel output.
 
 Writing out the mutual information, we have
